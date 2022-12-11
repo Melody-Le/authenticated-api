@@ -16,23 +16,21 @@
 					"urlencoded": [
 						{
 							"key": "username",
-							"value": "sgClara",
+							"value": "SGHarold",
 							"type": "text"
 						},
 						{
 							"key": "password",
-							"value": "sgClara123",
+							"value": "123",
 							"type": "text"
 						}
 					]
 				},
 				"url": {
-					"raw": "http://localhost:8800/api/v1/auth/login",
-					"protocol": "http",
+					"raw": "{{baseUrl}}/api/v1/auth/login",
 					"host": [
-						"localhost"
+						"{{baseUrl}}"
 					],
-					"port": "8800",
 					"path": [
 						"api",
 						"v1",
@@ -42,6 +40,32 @@
 				}
 			},
 			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "https://authenticated-api.onrender.com/api/v1/auth"
 		}
 	]
 }
