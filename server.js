@@ -29,7 +29,7 @@ app.use("/api/v1/auth", authRouter);
 app.listen(port, async () => {
   try {
     await mongoose.connect(connStr, {
-      dbName: "authenticated-api",
+      dbName: process.env.DB_NAME,
     });
   } catch (error) {
     console.log(`====>Failed to connect to DB<==== Error: ${error}`);
