@@ -5,7 +5,8 @@
   "main": "server.js",
   "scripts": {
     "db:seeds": "node ./seeds/seeds.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -29,5 +30,8 @@
     "joi": "^17.7.0",
     "mongoose": "^6.8.0",
     "npm": "^9.2.0"
+  },
+  "engines": {
+    "node": ">=14 <15"
   }
 }
