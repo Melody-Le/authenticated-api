@@ -1,0 +1,84 @@
+{
+	"info": {
+		"_postman_id": "cc374dc0-9e99-4c1f-a6eb-f35a996ad05f",
+		"name": "authenticated-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19468485"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "sgClara",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "sgClara123",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8800/api/v1/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8800",
+					"path": [
+						"api",
+						"v1",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Contry Code",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "sgClara",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "sgClara123",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8800/api/v1/auth/country-code",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8800",
+					"path": [
+						"api",
+						"v1",
+						"auth",
+						"country-code"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
