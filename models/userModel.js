@@ -3,8 +3,8 @@ const Schema = mongoose.Schema;
 
 const userSchema = new Schema(
   {
-    user_name: { type: String, min: 3, required: true, unique: true },
-    hashed_password: { type: String, required: true },
+    username: { type: String, min: 3, required: true, unique: true },
+    hash: { type: String, required: true },
   },
   { timestamps: true }
 );

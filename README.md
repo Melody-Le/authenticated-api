@@ -33,7 +33,7 @@ DB_NAME=...
 - To create seed files:
 
 ```bash
-npm run seed-all
+npm run db:seeds
 ```
 
 ## Run and Test Postman collection:

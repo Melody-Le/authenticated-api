@@ -4,7 +4,7 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "db:seeds": "node ./seeds/userSeed.js",
+    "db:seeds": "node ./seeds/seeds.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

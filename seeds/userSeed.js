@@ -4,12 +4,12 @@ const user = require("../models/userModel.js");
 
 const data = [
   {
-    user_name: "sgClara",
-    hashed_password: 123,
+    username: "sgClara",
+    hash: 123,
   },
   {
-    user_name: "sgHarold",
-    hashed_password: 123,
+    username: "sgHarold",
+    hash: 123,
   },
 ];
 const connStr = `mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASS}@generalassembly.17sk9.mongodb.net/?retryWrites=true&w=majority`;
