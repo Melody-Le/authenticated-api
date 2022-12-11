@@ -13,7 +13,6 @@ const controller = {
     const validatedResults = validationResults.value;
     let user = null;
     const errMsg = "Incorrect username or password";
-    // console.log("validatedResults:", validatedResults);
     try {
       user = await UserModel.findOne({ username: validatedResults.username });
       if (!user) {
@@ -25,14 +24,30 @@ const controller = {
 
     const passwordMatches = await bcrypt.compare(
       validatedResults.password,
-      user.hashed_password
+      user.hash
     );
 
     if (!passwordMatches) {
       return res.status(401).json({ error: errMsg });
     }
+    req.session.regenerate(function (err) {
+      if (err) {
+        return res
+          .status(401)
+          .json({ error: `Authentication failed. Please try again!` });
+      }
 
-    res.send("done");
+      req.session.user = user.username;
+
+      req.session.save(function (err) {
+        if (err) {
+          return res
+            .status(401)
+            .json({ error: `Authentication failed. Please try again!` });
+        }
+        res.status(200).json({ message: "Success Login", user });
+      });
+    });
   },
 };
 
