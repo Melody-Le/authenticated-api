@@ -27,9 +27,12 @@
 					]
 				},
 				"url": {
-					"raw": "{{baseUrl}}/api/v1/auth/login",
+					"raw": "https://authenticated-api.onrender.com/api/v1/auth/login",
+					"protocol": "https",
 					"host": [
-						"{{baseUrl}}"
+						"authenticated-api",
+						"onrender",
+						"com"
 					],
 					"path": [
 						"api",
@@ -65,7 +68,7 @@
 	"variable": [
 		{
 			"key": "baseUrl",
-			"value": "https://authenticated-api.onrender.com/api/v1/auth"
+			"value": "https://authenticated-api.onrender.com"
 		}
 	]
 }
